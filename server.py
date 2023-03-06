@@ -190,7 +190,7 @@ def main():
 	listenSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	listenSocket.bind((sys.argv[1], int(sys.argv[2])))
 	listenSocket.listen(10)
-	print("PyconChat Server running")
+	print("dark-Chat Server running")
 	while True:
 		client,_ = listenSocket.accept()
 		threading.Thread(target=handshake, args=(client,)).start()
