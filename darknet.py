@@ -53,7 +53,7 @@ def receive():
     while True:
         client, address = server.accept()
         slowprint(
-                  "Ulanildi".format(str(address)))
+                  "[CLIENT] {}".format(str(address)))
         client.send("NICKNAME".encode('ascii'))
         uzdarkweb = client.recv(1024).decode('ascii')
         darknet_bobo.append(uzdarkweb)
